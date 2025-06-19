@@ -81,10 +81,10 @@ export function SignUpForm({
               >
                 <Command className="size-5" />
               </div>
-              <span className="sr-only">Schedula</span>
+              <span className="sr-only">Slotsy</span>
             </Link>
             <h2 className="text-xl font-bold text-[#0a2540]">
-              Sign up with Schedula for free
+              Sign up with Slotsy for free
             </h2>
           </div>
 

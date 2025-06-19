@@ -80,7 +80,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </div>
           {state !== "collapsed" && (
             <div className="grid flex-1 text-left text-2xl leading-tight ml-px">
-              <h2 className="truncate font-medium">Schedula</h2>
+              <h2 className="truncate font-medium">Slotsy</h2>
             </div>
           )}
 

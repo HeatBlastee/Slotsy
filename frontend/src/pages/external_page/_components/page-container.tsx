@@ -42,7 +42,7 @@ const PageContainer = (props: {
                   <div className="text-[8px] -ml-[19px] text-[#F2F2F2] uppercase">
                     powered by
                   </div>
-                  <div className="text-lg -ml-[19px] font-semibold">Schedula</div>
+                  <div className="text-lg -ml-[19px] font-semibold">Slotsy</div>
                 </div>
               </a>
 

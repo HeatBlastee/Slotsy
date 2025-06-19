@@ -89,10 +89,10 @@ export function SignInForm({
               >
                 <Command className="size-5" />
               </div>
-              <span className="sr-only">Schedula</span>
+              <span className="sr-only">Slotsy</span>
             </Link>
             <h2 className="text-xl font-bold text-[#0a2540]">
-              Log into your Schedula account
+              Log into your Slotsy account
             </h2>
           </div>
 
