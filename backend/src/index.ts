@@ -42,9 +42,11 @@ app.use(`${BASE_PATH}/integration`, integrationRoutes);
 app.use(`${BASE_PATH}/meeting`, meetingRoutes);
 
 app.use(errorHandler);
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(config.PORT, async () => {
+    await initializeDatabase();
+    console.log(`Server listening on port ${config.PORT} in ${config.NODE_ENV}`);
+  });
+}
 
-app.listen(config.PORT, async () => {
-  await initializeDatabase();
-  console.log(`Server listening on port ${config.PORT} in ${config.NODE_ENV}`);
-});
 export default app;
