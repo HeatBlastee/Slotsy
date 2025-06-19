@@ -47,3 +47,4 @@ app.listen(config.PORT, async () => {
   await initializeDatabase();
   console.log(`Server listening on port ${config.PORT} in ${config.NODE_ENV}`);
 });
+export default app;
