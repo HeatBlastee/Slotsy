@@ -14,7 +14,7 @@ export const getDatabaseConfig = () => {
     entities: [path.join(__dirname, "../database/entities/*{.ts,.js}")],
     migrations: [path.join(__dirname, "../database/migrations/*{.ts,.js}")],
     synchronize: !isProduction,
-    logging: isProduction ? false : ["error"],
+    logging: isProduction ? true : ["error"],
     ssl: isProduction
       ? {
           rejectUnauthorized: true,
