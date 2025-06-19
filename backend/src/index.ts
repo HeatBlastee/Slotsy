@@ -20,6 +20,7 @@ const BASE_PATH = config.BASE_PATH;
 
 // --- Place CORS middleware here, at the very beginning ---
 app.use(cors({ origin: config.FRONTEND_ORIGIN, credentials: true }));
+console.log('CORS Origin:', config.FRONTEND_ORIGIN);
 // --- Remove the app.options("*", cors(...)) line as it's often not needed ---
 
 app.use(express.json()); // Keep one of these
