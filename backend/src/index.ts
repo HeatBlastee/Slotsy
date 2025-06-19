@@ -1,7 +1,7 @@
 import "dotenv/config";
 import "./config/passport.config";
 import express, { NextFunction, Request, Response } from "express";
-import cors from "cors";
+import cors from "cors"; // Make sure cors is imported
 import { config } from "./config/app.config";
 import { HTTPSTATUS } from "./config/http.config";
 import { errorHandler } from "./middlewares/errorHandler.middleware";
@@ -18,18 +18,15 @@ import meetingRoutes from "./routes/meeting.route";
 const app = express();
 const BASE_PATH = config.BASE_PATH;
 
-app.use(express.json());
+// --- Place CORS middleware here, at the very beginning ---
+app.use(cors({ origin: config.FRONTEND_ORIGIN, credentials: true }));
+// --- Remove the app.options("*", cors(...)) line as it's often not needed ---
 
+app.use(express.json()); // Keep one of these
 app.use(express.urlencoded({ extended: true }));
-
 app.use(passport.initialize());
 
-app.use(
-  cors({
-    origin: config.FRONTEND_ORIGIN,
-    credentials: true,
-  })
-);
+// app.use(express.json()); // Remove this duplicate
 
 app.get(
   "/",
